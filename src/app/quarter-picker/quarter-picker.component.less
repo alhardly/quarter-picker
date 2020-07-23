@@ -1,0 +1,104 @@
+:host{
+    display: inline-block;
+}
+::ng-deep{
+    .simulation-select-wrap {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        &.quarter-picker-disabled{
+            background-color: #f5f5f5;
+            border-radius:4px ;
+           .ant-calendar-picker-input{
+                border-color: #d9d9d9;
+                border-right-width: 1px!important;
+           }
+        }
+
+        .ant-calendar-picker {
+            position: relative;
+            z-index: 9;
+        }
+
+        .ant-calendar-picker-input {
+            color: transparent;
+            background-color: transparent;
+            // height: 34px;
+        }
+
+        .simulation-select-value {
+            position: absolute;
+            width:calc(~"100% - 20px - 30px");
+            top: 0;
+            left: 0;
+            bottom: 0;
+            line-height: 32px;
+            padding-left: 14px;
+            padding-right: 5px;
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+        }       
+
+    }
+
+    .quarter-picker-wrap{
+        .ant-calendar-month .ant-calendar-month-header-wrap {
+            position: relative;
+            height: 210px;
+            }
+        
+            .ant-calendar-quarter-panel-body {
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 26px;
+
+               .ant-calendar-quarter-panel-quarter {
+                    width: 38%;
+                    margin: 10px 6% 0;
+                    height: 34px;
+                    line-height: 34px;
+                    font-size: 14px;
+                    border-radius: 2px;
+                    cursor: pointer;
+                }
+               .ant-calendar-quarter-panel-quarter:hover {
+                    background:#e6f7ff;
+                   
+                }
+               .ant-calendar-quarter-panel-quarter.select {                   
+                    background: #4980ff;
+                    color: #ffffff;
+                }
+               .ant-calendar-quarter-panel-quarter.quarter-disabled {                   
+                   color: rgba(0,0,0,.25);
+                   background-color: #f5f5f5;
+                   cursor: not-allowed;
+                }
+
+            }
+
+
+            // 隐藏月份选择
+            .ant-calendar-month-panel-body{
+                display: none;
+            }
+
+            // 年份不可选取样式
+            .ant-calendar-year-panel-cell.year-disabled:not(.ant-calendar-year-panel-last-decade-cell):not(.ant-calendar-year-panel-next-decade-cell){            
+                 pointer-events: none;
+            }
+            .ant-calendar-year-panel-cell.year-disabled:not(.ant-calendar-year-panel-last-decade-cell):not(.ant-calendar-year-panel-next-decade-cell) 
+            {
+                a{
+                    color: rgba(0,0,0,.25);
+                }             
+                
+            }
+
+            
+    }
+   
+}

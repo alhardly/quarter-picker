@@ -1,0 +1,5 @@
+<div class='simulation-select-wrap' [ngClass]='{ "quarter-picker-disabled" :nzDisabled}'>
+    <nz-month-picker #quarterPicker class="quarter-picker" [nzDisabled]="nzDisabled" [(ngModel)]="date" (ngModelChange)='clearTime($event)' nzPlaceHolder="请选择季度" (nzOnOpenChange)="showQuarter($event)" nzDropdownClassName='quarter-picker-wrap'>
+    </nz-month-picker>
+    <div class='simulation-select-value'>{{ quarter }}</div>
+</div>
